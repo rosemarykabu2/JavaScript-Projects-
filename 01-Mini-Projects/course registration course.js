@@ -51,3 +51,10 @@ let hasRegisteredCourse = courses.every(function(course)
 );
 
 console.log(hasRegisteredCourse)
+ 
+let totalRegisteredCredits = courses.reduce(function(total,course)
+{
+  return total + course.credits;
+},0
+);
+console.log(totalRegisteredCredits)
