@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .open{
+      color:green;
+      font-size:2rem;
+      background-color:lightyellow;
+      padding: 10px;
+      border-radius: 5px;
+      border:none;
+    }
+  </style>
+</head>
+<body>
+   <p id="status">Attendance is closed.</p>
+
+  <button id="openBtn">Open Attendance</button>
+  <button id="closeBtn">Close Attendance</button>
+
+  <script>
+     const status = document.querySelector('#status')
+     const button = document.querySelector('#openBtn')
+     const button1 = document.querySelector('#closeBtn')
+
+     button.addEventListener('click',function(){
+      status.textContent = 'Attendance is open.'
+      status.classList.add('open');
+     });
+
+     button1.addEventListener('click',function(){
+      status.textContent = 'Attendance is closed.'
+     status.classList.remove('open')
+     })
+
+  </script>
+</body>
+</html>

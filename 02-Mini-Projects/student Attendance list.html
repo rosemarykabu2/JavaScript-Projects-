@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .open{
+      color:green;
+      background-color:lightcoral;
+      padding:10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="students">
+    <p>Rose</p>
+    <p>David</p>
+    <p>Akua</p>
+    <button>Mark Present</button>
+  </div>
+
+  <script>
+    const button = document.querySelector('button')
+    const students = document.querySelectorAll('#students p')
+   students.forEach(function(student){
+   button.addEventListener('click',function(){
+    student.classList.toggle('open');
+  })
+});
+  </script>
+</body>
+</html>

@@ -10,6 +10,32 @@
 
   <button id="submitBtn">Submit</button>
 
-  <p id="result"></p>
+  <p id="result">Your result will appear here.</p><br>
+  
+  <p id="status">Attendance is closed.</p>
+
+  <button id="openBtn">Open Attendance</button>
+
+  <script>
+    const inputValue = document.querySelector('#studentName');
+    
+    const button = document.querySelector('#submitBtn');
+
+    const paragraph = document.querySelector('#result');
+
+    function addName(){
+      paragraph.textContent = inputValue.value
+    }
+    button.addEventListener('click',addName);
+
+    const result = document.querySelector('#status');
+    const button2 = document.querySelector('#openBtn');
+
+    function changeStyle(){
+      result.style.color = 'green'
+      result.style.backgroundColor = 'lightyellow'
+    }
+    button2.addEventListener('click',changeStyle);
+  </script>
 </body>
 </html>

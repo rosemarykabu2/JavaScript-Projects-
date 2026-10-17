@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+     .open{
+      color:green;
+      font-size:2rem;
+      background-color:lightyellow;
+      padding: 10px;
+      border-radius: 5px;
+      border:none;
+    }
+  </style>
+</head>
+<body>
+  <button id="openBtn">
+    Mark Present
+  </button>
+
+  <button id="closeBtn">
+    Remove Message
+  </button>
+
+  <p id="result"></p>
+
+  <script>
+    const button = document.querySelector('#openBtn');
+    const button1 = document.querySelector('#closeBtn')
+    const result = document.querySelector('#result')
+    
+
+    button.addEventListener('click', function(){
+      const paragraph = document.createElement('p');
+      result.textContent = 'You have been marked present!'
+      document.body.appendChild(paragraph)
+      button.addEventListener('click')
+    });
+
+    button1.addEventListener('click',function(){
+      result.remove()
+    });
+
+
+    
+  </script>
+</body>
+</html>

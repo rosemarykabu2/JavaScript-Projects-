@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .highlight{
+      color:green;
+      background-color:lightyellow;
+      padding:10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="students">
+    <p>Rose</p>
+    <p>David</p>
+    <p>Akua</p>
+  </div>
+
+  <script>
+      const students = document.querySelectorAll('#students p')
+      
+        students.forEach(function(student){
+        student.addEventListener('click',function(){
+          student.classList.toggle('highlight');
+        }) 
+         
+        });
+      
+
+      
+    
+  </script>
+</body>
+</html>
