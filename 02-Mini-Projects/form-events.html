@@ -6,19 +6,30 @@
   <title>Document</title>
 </head>
 <body>
+  <form id="registrationForm">
   <input type="text" id="studentName" placeholder="Enter your name">
 
-  <p id="preview"></p>
+  <button type="submit">Register</button>
+  </form>
+   <p id="message"></p>
 
   <script>
-    const inputValue = document.querySelector('#studentName')
+   const form = document.querySelector('#registrationForm')
 
-    const preview = document.querySelector('#preview')
+    const studentName = document.querySelector('#studentName')
 
-    function output(){
-      preview.textContent = inputValue.value
-    }
-    inputValue.addEventListener('input',output);
+    const message = document.querySelector('#message')
+    
+    form.addEventListener('submit',function(event){
+      event.preventDefault()
+      if (studentName.value.trim() ===''){
+        message.textContent = 'Please enter your name'
+      }else{
+      console.log('Form Submitted!')
+      message.textContent = studentName.value  +  ' registered successfully! ';
+      }
+     
+    });
   </script>
 </body>
 </html>
