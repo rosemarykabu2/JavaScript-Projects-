@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <h2>When did Ghana gain independence?</h2>
+  <div id="options">
+    <button>A. 1956</button>
+    <button>B. 1957</button>
+    <button>C. 1960</button>
+    <button>D. 1963</button>
+  </div>
+
+
+
+  <p id="feedback"></p>
+
+  <script>
+    const options = document.querySelectorAll('#options button')
+    const feedback = document.querySelector('#feedback')
+
+    options.forEach(function(option){
+      option.addEventListener('click',function(event){
+        feedback.textContent = event.target.textContent
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button id="submitBtn" disabled>Submit</button>
+
+  <button id="toggleBtn">Enable Submit</button>
+
+  <p id="message">The submit button is disabled</p>
+
+  <script>
+    const submitBtn = document.querySelector('#submitBtn')
+
+    const toggleBtn = document.querySelector('#toggleBtn')
+
+    const message = document.querySelector('#message')
+
+    console.log(submitBtn.hasAttribute('disabled'))
+
+    function enableSubmit(){
+      if (submitBtn.hasAttribute('disabled') === true){
+        submitBtn.removeAttribute('disabled')
+        message.textContent = 'The submit button is enabled'
+        toggleBtn.textContent = 'Disable Submit'
+      
+
+      }else{
+        submitBtn.setAttribute('disabled','')
+        message.textContent = 'The submit button is disabled'
+         toggleBtn.textContent = 'Enable Submit'
+      }
+    }
+    toggleBtn.addEventListener('click',enableSubmit);
+
+   
+    
+  </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button>Apple</button>
+  <button>Mango</button>
+  <button>Orange</button>
+
+  <p id="feedback"></p>
+
+  <script>
+    const options = document.querySelectorAll('button');
+    const feedback = document.querySelector('#feedback')
+
+    options.forEach(function(option){
+      option.addEventListener('click',function(event){
+        feedback.textContent = event.target.textContent
+      });
+    });
+  </script>
+</body>
+</html>
